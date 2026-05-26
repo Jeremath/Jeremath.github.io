@@ -473,6 +473,53 @@ h2::before {
   border-radius: 4px;
 }
 
+.visitor-map-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--soft);
+  padding: 14px 16px;
+}
+
+.visitor-map-copy h3 {
+  color: #111;
+  font-size: 1.02rem;
+}
+
+.visitor-map-copy p {
+  max-width: 560px;
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.visitor-map {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: #fff;
+  padding: 6px;
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.visitor-map:hover {
+  border-color: #a9c3dd;
+  transform: translateY(-1px);
+}
+
+.visitor-map img {
+  display: block;
+  width: 180px;
+  height: 90px;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
 .footer {
   width: min(var(--max), calc(100% - 36px));
   margin: 0 auto;
@@ -606,6 +653,14 @@ h2::before {
   .publication,
   .education-item {
     grid-template-columns: 1fr;
+  }
+
+  .visitor-map-card {
+    grid-template-columns: 1fr;
+  }
+
+  .visitor-map {
+    width: fit-content;
   }
 
   .pub-thumb img {
