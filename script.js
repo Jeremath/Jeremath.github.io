@@ -1,5 +1,7 @@
 const navToggle = document.querySelector(".menu-button");
 const navLinks = document.querySelector(".nav-links");
+const newsList = document.querySelector("#news-list");
+const newsToggle = document.querySelector(".news-toggle");
 const year = document.querySelector("#year");
 
 if (year) {
@@ -19,4 +21,21 @@ if (navToggle && navLinks) {
       navLinks.classList.remove("open");
     }
   });
+}
+
+if (newsList && newsToggle) {
+  const shouldCollapse = newsList.children.length > 10;
+
+  if (shouldCollapse) {
+    newsList.classList.add("collapsed");
+
+    newsToggle.addEventListener("click", () => {
+      const expanded = newsToggle.getAttribute("aria-expanded") === "true";
+      newsToggle.setAttribute("aria-expanded", String(!expanded));
+      newsList.classList.toggle("collapsed", expanded);
+      newsToggle.textContent = expanded ? "Show more" : "Show less";
+    });
+  } else {
+    newsToggle.hidden = true;
+  }
 }
