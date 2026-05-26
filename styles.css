@@ -514,8 +514,8 @@ h2::before {
 
 .visitor-map img {
   display: block;
-  width: 180px;
-  height: 90px;
+  width: min(320px, 100%);
+  height: auto;
   border-radius: 3px;
   object-fit: cover;
 }
