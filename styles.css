@@ -288,7 +288,7 @@ h2::before {
   word-break: break-word;
 }
 
-.news-list.collapsed li:nth-child(n + 11) {
+.news-list li.is-hidden {
   display: none;
 }
 
@@ -418,67 +418,59 @@ h2::before {
   color: #444;
 }
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.contact-card {
-  display: grid;
-  align-content: start;
-  min-height: 132px;
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
   border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: 4px;
   background: var(--soft);
-  padding: 16px;
   color: #333;
+  font: inherit;
+  font-size: 0.94rem;
+  font-weight: 700;
+  cursor: pointer;
+  gap: 8px;
+  padding: 0 12px;
   transition:
     border-color 160ms ease,
-    background 160ms ease,
-    transform 160ms ease;
+    background 160ms ease;
 }
 
-.contact-card:hover {
+.contact-link:hover {
   border-color: #a9c3dd;
   background: #f2f8ff;
-  transform: translateY(-1px);
   text-decoration: none;
 }
 
-.contact-card > img:first-child {
-  width: 28px;
-  height: 28px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+.contact-link img {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
   object-fit: cover;
 }
 
-.contact-card span {
-  color: var(--muted);
-  font-size: 0.82rem;
-  font-weight: 750;
-  text-transform: uppercase;
-}
-
-.contact-card strong {
-  margin-top: 4px;
-  color: #222;
-  font-size: 0.96rem;
-  overflow-wrap: anywhere;
-}
-
-.wechat-card {
-  align-items: start;
-}
-
-.wechat-qr {
-  width: 132px;
+.wechat-panel {
+  width: fit-content;
   max-width: 100%;
-  margin-top: 10px;
+  margin-top: 14px;
   border: 1px solid var(--line);
-  border-radius: 4px;
+  border-radius: 6px;
   background: #fff;
+  padding: 10px;
+}
+
+.wechat-panel img {
+  display: block;
+  width: 220px;
+  max-width: min(100%, 280px);
+  border-radius: 4px;
 }
 
 .footer {
@@ -612,8 +604,7 @@ h2::before {
   }
 
   .publication,
-  .education-item,
-  .contact-grid {
+  .education-item {
     grid-template-columns: 1fr;
   }
 

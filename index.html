@@ -126,38 +126,38 @@
               <time>2024</time>
               <span>🏆 Received the National Scholarship for the second consecutive year.</span>
             </li>
-            <li>
+            <li class="is-hidden">
               <time>2024</time>
               <span>🏆 Recognized as a university-level Outstanding Student Model.</span>
             </li>
-            <li>
+            <li class="is-hidden">
               <time>2024</time>
               <span>🏆 Won national first prize in the 15th National College Student Mathematics Competition Final.</span>
             </li>
-            <li>
+            <li class="is-hidden">
               <time>2024</time>
               <span>🏆 Won national third prize in the 9th National Cryptography Technology Competition.</span>
             </li>
-            <li>
+            <li class="is-hidden">
               <time>2024</time>
               <span>🏆 Won Shaanxi provincial first prize in the Contemporary Undergraduate Mathematical Contest in Modeling.</span>
             </li>
-            <li>
+            <li class="is-hidden">
               <time>2024</time>
               <span>🏆 Received Honorable Mention in the Mathematical Contest in Modeling.</span>
             </li>
-            <li>
+            <li class="is-hidden">
               <time>2024</time>
               <span>
                 Served as president of the Science and Technology Association at Xidian
                 University.
               </span>
             </li>
-            <li>
+            <li class="is-hidden">
               <time>2023</time>
               <span>🏆 Received the National Scholarship and Outstanding Student Model honor.</span>
             </li>
-            <li>
+            <li class="is-hidden">
               <time>2023</time>
               <span>🏆 Won provincial silver award in the 9th Internet+ Innovation and Entrepreneurship Competition.</span>
             </li>
@@ -233,31 +233,34 @@
 
         <section id="contact">
           <h2>Contact</h2>
-          <div class="contact-grid">
-            <a class="contact-card" href="mailto:youtaoding9@gmail.com">
+          <div class="contact-links">
+            <a class="contact-link" href="mailto:youtaoding9@gmail.com">
               <img src="assets/icons/email.png" alt="" />
               <span>Email</span>
-              <strong>youtaoding9@gmail.com</strong>
             </a>
             <a
-              class="contact-card"
+              class="contact-link"
               href="https://github.com/Jeremath"
               target="_blank"
               rel="noreferrer"
             >
               <img src="assets/icons/github.jpg" alt="" />
               <span>GitHub</span>
-              <strong>github.com/Jeremath</strong>
             </a>
-            <a
-              class="contact-card wechat-card"
-              href="assets/images/wechat.jpg"
-              target="_blank"
-              rel="noreferrer"
+            <button
+              class="contact-link"
+              type="button"
+              data-wechat-trigger
+              aria-expanded="false"
+              aria-controls="wechat-panel"
             >
               <img src="assets/icons/wechat.png" alt="" />
               <span>WeChat</span>
-              <img class="wechat-qr" src="assets/images/wechat.jpg" alt="Youtao Ding WeChat QR code" />
+            </button>
+          </div>
+          <div class="wechat-panel" id="wechat-panel" hidden>
+            <a href="assets/images/wechat.jpg" target="_blank" rel="noreferrer">
+              <img src="assets/images/wechat.jpg" alt="Youtao Ding WeChat QR code" />
             </a>
           </div>
         </section>
